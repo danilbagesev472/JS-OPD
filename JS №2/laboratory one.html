@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    let EnterednNumber = prompt("Введите число")
+      for(let i= 1;i<=EnteredNumber;i++){
+         let sub=EnteredNumber
+      while(sub>0){
+          sub-=i;
+      if(sub==0){
+      if(isPrime(i)){
+        divisor=i;
+        }
+      }
+    }
+  }
+function isPrime(i){
+let counter = 0
+  for(let j=1;j<=i;j++){
+      let sub=1;
+  while(sub>0)  {
+    sub-=j
+  if(sub==0){
+    counter++;
+          }
+        }
+    if(counter==2)return true
+  else return false
+      }
+    } 
+    alert(divisor)
+    </script>
+</body>
+</html>
