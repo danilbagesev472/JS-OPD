@@ -9,15 +9,15 @@
 <body>
     <script>
 let arr = 
-         [[1, 7, 4],
-          [5, 2, 8],
-          [9, 6, 3]];
+       [[1, 7, 4],
+        [5, 2, 8],
+        [9, 6, 3]];
         for(let a = 0; a < arr.length; a++){
         for(let b = 0; b < arr.length; b++){
         if (arr[b] > arr[b+1]){
-          let temp = arr[0][b]
-          arr[0][b] = arr[0][b+1]
-          arr[0][b+1] = temp
+        let temp = arr[0][b]
+         arr[0][b] = arr[0][b+1]
+         arr[0][b+1] = temp
         }
       }
     }
