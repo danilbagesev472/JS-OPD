@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color:black;">
+    <button id="btn1">ClickMe</button>
+    <button id="btn2">Show</button>
+    <textarea id="txt1" placeholder="enter your data"></textarea>
+    <script>
+        let btn1 = document.getElementById('btn1')
+        let btn2 = document.getElementById('btn2')
+        let txt1 = document.getElementById('txt1')
+        let counter = 0
+        let arr = []
+        let max
+        let min
+        btn1.onclick = function(){
+            arr.push(txt1.value)
+            max = (txt1.value)
+            min = (txt1.value)
+            txt1.value = ""
+        }
+        btn2.onclick = function(){
+            for (let i = 0; i < arr.length; i++){
+                if (max<(arr[i])){
+                    max = arr[i]
+                }
+                if (min>(arr[i])){
+                    min = arr[i]
+                }
+            }
+            console.log(arr)
+            console.log(min)
+            console.log(max)
+
+        }
+    </script>
+</body>
+</html>
