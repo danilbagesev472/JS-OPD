@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Registration</h1>
+    <textarea name="Login" id="txt1"></textarea>
+    <textarea name="Password" id="txt2"></textarea>
+    <button id="btn1">Log on</button>
+    <button id="btn2">Show</button>
+    </div>
+    <script>
+        let arr = []
+        let btn1 =document.getElementById("btn1")
+        let btn2 =document.getElementById("btn2")
+        btn1.onclick =function(){
+            if(txt1.value===''){
+            alert("Этого пользователя нельзя зарегестрировать ")
+            }
+            if(document.getElementById('txt2').value.length >=4 && document.getElementById('txt2').value.length <=12)   {
+            console.log("Пароль подходит")
+            }else{
+            console.log("Не подходит")
+            }
+                for(let x=0;x<arr.length;x+=2){
+                if(txt1.value===arr[x]){
+                    console.log("Имя занято")
+                    break
+                    }else{
+                    console.log("Имя подходит")
+                    }
+                }
+            arr.push(txt1.value)
+            arr.push(txt2.value)
+        }
+        btn2.onclick = function(){
+            console.log(arr)  
+        }
+    </script>
+        <div>
+            <H1>Entrance</H1>
+        <textarea name="Login" id="txt3"></textarea>
+        <textarea name="Password" id="txt4"></textarea>
+        <button id="btn3">Check</button>
+        </div>
+        <script>
+            btn3.onclick =function(){
+                for(let y=0;y<arr.length;y+=2){
+                    for(let z =1;z<arr.length;z+=2){
+                if(txt3.value===arr[y] && txt4.value===arr[z]){
+                    console.log("Такой пользователь существует")
+                    break
+                    }else{
+                    console.log("Зарегестрируйте пользователя")
+                    }
+                }
+            }
+        }
+        </script>
+</div>
+</body>
+</html>
