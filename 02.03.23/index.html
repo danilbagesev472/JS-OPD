@@ -9,29 +9,39 @@
 <body>
     <script>
         class Person {
-            constructor(name, age,height,weight, nationality, flor){
-            this.name = name
-            this.age = age
-            this.height = height
-            this. weight =  weight
-            this.nationality = nationality
-            this.flor = flor
-        }
-        methodHay(object,string){
-            console.log(this.name)
-        }
-        methodHeight(string){
-            console.log(this.height)
-        }
-        methodWeight(string){
-            console.log(this.weight)
-        }
-    }
-    let PersonTwo = new Person(prompt("Твое имя?"),"17","177","65","Русский","true")
-    let Person4 = new Person(`${PersonTwo}`,"17",prompt("Твой рост?"),"65","Русский","true")
-    let Person5 = new Person(`${PersonTwo}`,"17",`${Person4}`,prompt("Твой вес?"),"Русский","true")
-    let Person6 = new Person(`${PersonTwo}`,"17",`${Person4}`,`${Person5}`,"Русский","true")
-    console.log(Person6)
+  constructor(name, age, height, weight, nationality, isMale) {
+    this.name = name;
+    this.age = age;
+    this.height = height;
+    this.weight = weight;
+    this.nationality = nationality;
+    this.isMale = isMale;
+  }
+
+  say(message) {
+    const secondPersonName = "Данон";
+    console.log(`${secondPersonName} ${message}`);
+  }
+
+  heightManager(newHeight) {
+    this.height = newHeight;
+    console.log(`Высота ${this.name} изменена на ${newHeight} см`);
+  }
+
+  weightManager(newWeight) {
+    this.weight = newWeight;
+    console.log(`Вес ${this.name} изменен на ${newWeight} кг`);
+  }
+}
+
+const person1 = new Person("Данон", 17, 178, 65, "Россия", true);
+const person2 = new Person("Алиса", 16, 167, 49, "Россия", false);
+
+person1.heightManager(168); 
+person2.weightManager(50);
+
+console.log(person1);
+console.log(person2);
     </script>
 </body>
 </html>
