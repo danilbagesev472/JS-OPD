@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name, age,height,weight, nationality, flor){
+            this.name = name
+            this.age = age
+            this.height = height
+            this. weight =  weight
+            this.nationality = nationality
+            this.flor = flor
+        }
+        methodHay(string){
+            console.log(this.name)
+        }
+        methodHeight(string){
+            console.log(this.height)
+        }
+        methodWeight(string){
+            console.log(this.weight)
+        }
+    }
+    let PersonTwo = new Person(prompt("Твое имя?"),"17","177","65","Русский","true")
+    let Person4 = new Person(`${PersonTwo}`,"17",prompt("Твой рост?"),"65","Русский","true")
+    let Person5 = new Person(`${PersonTwo}`,"17",`${Person4}`,prompt("Твой вес?"),"Русский","true")
+    let Person6 = new Person(`${PersonTwo}`,"17",`${Person4}`,`${Person5}`,"Русский","true")
+    console.log(Person6)
+    </script>
+</body>
+</html>
